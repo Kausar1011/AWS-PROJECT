@@ -1,1 +1,15 @@
+# Use a lightweight Node.js image
+FROM node:16-alpine
+
+# Set the working directory
+WORKDIR /usr/src/app
+
+# Copy the application file
+COPY ./src/app.js .
+
+# Expose the port your app will run on
+EXPOSE 3000
+
+# Start the Node.js application
+CMD ["node", "app.js"]
 
